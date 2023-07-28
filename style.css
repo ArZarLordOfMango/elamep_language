@@ -5,3 +5,8 @@ h1 {
 body {
   font-family: "Times New Roman", Times, serif;
 }
+
+.sound-button {
+  background-color: transparent;
+  border: 0;
+}
