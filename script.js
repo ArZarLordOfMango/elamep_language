@@ -1,4 +1,5 @@
-function playSound() {
-    var audioElement = document.getElementById("sound");
-    audioElement.play();
+function playSound(button) {
+  const soundFile = button.dataset.sound;
+  const audio = new Audio(soundFile);
+  audio.play();
 }
