@@ -33,7 +33,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 15px;
   }
   h1 {
   	font-size: 25px;
@@ -74,5 +74,16 @@ span2 {
 span3 {
 	color: #EC132C;
 	}
-	
+
+.footer  {
+ border-top: 1px solid black;
+ color: gray;
+ padding: 10px;
+ text-decoration: none;
+}
+
+.footer a {
+ color: gray;
+ text-decoration: none;
+}
 	

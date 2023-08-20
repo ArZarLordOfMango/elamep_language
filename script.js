@@ -3,7 +3,8 @@ function playSound(button) {
   const audio = new Audio(soundFile);
   audio.play();
 }
-const order = 'abcĉgsнiţøkьрřхуÿñшδеωыqжψmпəλςΞ';
+const order = "AaBbCcĈĉGgSsНнІiŢţØøKkЬьРрŘřХхУуŸÿÑñШшДδЕеΩωЫыQqЖжΨψMmПпƏəΛλΣςΞΞ";
+const orderBig = "ABCĈGSНІŢØKРŘХУŸÑШДЕΩЫQЖΨMПƏΛΣ";
 
 function customSort(words, customOrder) {
   function compareStrings(a, b) {
@@ -31,7 +32,11 @@ fetch('dictionary.json')
             let term = key;
             let definition = data[key];
             let entry = document.createElement('p');
+            if(orderBig.includes(term)) {
+            	entry.textContent = term;
+            } else {
             entry.textContent = `${term} — ${definition}`;
+            }
             dictionaryContent.appendChild(entry);
         });
     })
