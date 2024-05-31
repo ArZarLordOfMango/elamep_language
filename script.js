@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => console.error('Error fetching dictionary:', error));
 });
 
-const specialOrder = 'AÀÁÂÃÄ...'; // Add the full special letter order here
+const specialOrder = "AaBbCcĈĉGgSsНнІiŢţØøKkЬьРрŘřХхУуŸÿÑñШшДδЕеΩωЫыQqЖжΨψMmПпƏəΛλΣςΞΞ";
 
 function sortDictionary(words) {
   return words.sort((a, b) => {
