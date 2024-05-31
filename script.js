@@ -14,9 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => console.error('Error fetching dictionary:', error));
 });
 
-// AaBbCcĈĉGgSsНнІiŢţØøKkЬьРрŘřХхУуŸÿÑñШшДδЕеΩωЫыQqЖжΨψMmПпƏəΛλΣςΞΞ
-// ABCĈGSНІŢØKРŘХУŸÑШДЕΩЫQЖΨMПƏΛΣ"
-const specialOrder = "abcĉgsнiţøkьрřхуŸÿÑñШшДδеΩωЫыQqЖжΨψMmПпƏəΛλΣςΞΞ";
+const specialOrder = "AaBbCcĈĉGgSsНнІiŢţØøKkЬьРрŘřХхУуŸÿÑñШшДδЕеΩωЫыQqЖжΨψMmПпƏəΛλΣςΞΞ ";
 
 function sortDictionary(words) {
   return words.sort((a, b) => {
@@ -40,7 +38,7 @@ function displayDictionary(words) {
   const dictionaryDiv = document.getElementById('dictionary');
   words.forEach(entry => {
       const wordElement = document.createElement('div');
-      wordElement.textContent = `${entry.word}: ${entry.definition}`;
+      wordElement.innerHTML = `${entry.word} (eng: ${entry.translate})<br>${entry.definition}<br>`;
       dictionaryDiv.appendChild(wordElement);
   });
 }
