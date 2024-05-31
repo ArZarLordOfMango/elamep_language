@@ -7,7 +7,16 @@ body {
 #dictionary {
   margin: 20px;
   padding: 10px;
+  text-align: left;
   background: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.word-translate {
+  font-size: 1.5em; 
+  font-weight: bold;
+}
+.definition {
+  font-size: 1em; 
+  margin-bottom: 10px;
 }

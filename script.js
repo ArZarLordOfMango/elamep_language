@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => console.error('Error fetching dictionary:', error));
 });
 
-const specialOrder = "AaBbCcĈĉGgSsНнІiŢţØøKkЬьРрŘřХхУуŸÿÑñШшДδЕеΩωЫыQqЖжΨψMmПпƏəΛλΣςΞΞ ";
+const specialOrder = 'AÀÁÂÃÄ...'; // Add the full special letter order here
 
 function sortDictionary(words) {
   return words.sort((a, b) => {
@@ -38,7 +38,10 @@ function displayDictionary(words) {
   const dictionaryDiv = document.getElementById('dictionary');
   words.forEach(entry => {
       const wordElement = document.createElement('div');
-      wordElement.innerHTML = `${entry.word} (eng: ${entry.translate})<br>${entry.definition}<br>`;
+      wordElement.innerHTML = `
+          <div class="word-translate">${entry.word} (eng: ${entry.translate})</div>
+          <div class="definition">${entry.definition}</div>
+      `;
       dictionaryDiv.appendChild(wordElement);
   });
 }
